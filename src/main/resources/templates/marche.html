@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+   <title>Marche  </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+		<div class="container">
+		<a class="navbar-brand" href="/">Marche</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+			aria-controls="navbarResponsive"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+				
+					<li class="nav-item">
+						<a class="nav-link" href="#">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Services</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+        	<td class="table-warning" th:text="${marche.Id}"></td>
+            <td class="table-warning" th:text="${marche.Nom}"></td>
+            <td class="table-warning" th:text="${marche.Lieu}"></td>
+         	<td class="table-warning"  th:text="${marche.Heure_ouverture}"></td>
+         	<td class="table-warning" th:text="${marche.Heure_fermeture}"></td>
+         	<div class="contenair">
+         	
+				<div class="card text-center">
+				  <div class="card-header">
+				    Marches
+				  </div>
+				  <div class="card-body">
+				    <h5 class="card-title" th:text="${marche.Nom}">Nom</h5>
+				   
+				   <td class="table-warning" th:text="${marche.Lieu}"></td>
+         			<td class="table-warning"  th:text="${marche.Heure_ouverture}"></td>
+         			<td class="table-warning" th:text="${marche.Heure_fermeture}"></td>
+         	
+				    <a href="#" class="btn btn-primary" >edit</a>
+				  </div>
+				  <div class="card-footer text-muted">
+				   <p th:text="${marche.DateCreation}"></P>
+				  </div>
+				</div>
+         	
+         	</div>
+
+</body>
+</html>

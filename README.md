@@ -8,7 +8,7 @@ Java web projet Marche spring boot  Tp pratique
 
 - :seedling: branch master  ===================> niveaau REST (Rescontroller)
 
-- :seedling:  branch main ===================> list arraylist.
+- :seedling:  branch main ===================> utilisation des list (donner sstatique).
 
 - :zap: branch Tp2 ==================> thymeleaf.
 

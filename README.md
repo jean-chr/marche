@@ -12,4 +12,4 @@ Java web projet Marche spring boot  Tp pratique
 
 - :zap: branch Tp2 ==================> thymeleaf.
 
-- :mailbox:me contacter: [![gmail Badge](https://img.shields.io/badge/-kakbar-blue?style=flat&logo=gmail&logoColor=white)](jeanchristbodjona@gmail.com)
+- :mailbox:me contacter: jeanchristbodjona@gmail.com

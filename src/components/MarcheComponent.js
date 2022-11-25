@@ -16,19 +16,20 @@ class MarcheComponent extends React.Component {
         });
     }
 
+
     render (){
         return (
             <div>
-                <h1 className = "text-center"> Marches List</h1>
+                <h1 className = "text-center"> Marches Liste</h1>
                 <table className = "table table-striped">
-                    <thead>
+                    <thead className="table-primary">
                         <tr>
                             <td> Id</td>
                             <td> Nom</td>
-                            <td> Emplacement</td>
+                            <td> Lieu</td>
                             <td> Heure ouverture</td>
                             <td> Heure fermeture</td>
-                            <td> Nbre hangars</td>
+                            <td> Nombre hangars</td>
                         </tr>
 
                     </thead>
@@ -37,11 +38,12 @@ class MarcheComponent extends React.Component {
                             this.state.marches.map(
                                 marche => 
                                 <tr key = {marche.id}>
-                                     <td> {marche.nom}</td>   
-                                     <td> {marche.emplacement}</td>   
-                                     <td> {marche.heure_ouverture}</td>   
-                                     <td> {marche.heure_fermeture}</td> 
-                                     <td> {marche.nbre_hangars}</td>   
+                                     <td className = "table-warning"> {marche.id}</td>
+                                     <td className = "table-warning"> {marche.nom}</td>   
+                                     <td className = "table-warning"> {marche.lieu}</td>   
+                                     <td className = "table-warning"> {marche.heure_ouverture}</td>   
+                                     <td className = "table-warning"> {marche.heure_fermeture}</td> 
+                                     <td className = "table-warning"> {marche.hangars_nombre}</td>   
                                 </tr>
                             )
                         }

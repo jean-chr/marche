@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const MARCHES_REST_API_URL = 'http://localhost:8080/api/marches';
+const MARCHES_REST_API_URL = 'http://localhost:8080/marches';
 
 class MarcheService {
 

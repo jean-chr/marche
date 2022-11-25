@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import com.uklpmmi.marche.model.Marche;
 
 @Service
-public class MarcheInterfaceImpl implements MarcheInterface{
+public class Marcheservive implements MarcheInterface{
 
 	
 	@Autowired

@@ -1,5 +1,6 @@
 package com.uklpmmi.marche.model;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -16,9 +17,9 @@ public class Marche {
 	private long Id;
 	private String Nom;
 	private String Lieu;
-	private Date Heure_ouverture;
+	private String Heure_ouverture;
 	private int  Hangars_nombre;
-	private Date Heure_fermeture;
+	private String Heure_fermeture;
 	private Date DateCreation;
 	@ManyToOne
 	private Categorie categorie;
@@ -72,13 +73,14 @@ public class Marche {
 	}
 
 
-	public Date getHeure_ouverture() {
+	public String getHeure_ouverture() {
 		return Heure_ouverture;
 	}
 
 
-	public void setHeure_ouverture(Date heure_ouverture) {
-		Heure_ouverture = heure_ouverture;
+	public void setHeure_ouverture(String heure_ouverture) {
+		 
+		Heure_ouverture = formatage(heure_ouverture);
 	}
 
 
@@ -92,13 +94,13 @@ public class Marche {
 	}
 
 
-	public Date getHeure_fermeture() {
+	public String getHeure_fermeture() {
 		return Heure_fermeture;
 	}
 
 
-	public void setHeure_fermeture(Date heure_fermeture) {
-		Heure_fermeture = heure_fermeture;
+	public void setHeure_fermeture(String string) {
+		Heure_fermeture =formatage(string);
 	}
 
 
@@ -111,4 +113,8 @@ public class Marche {
 		DateCreation = dateCreation;
 	}
 	
+	public String formatage (String string) {
+		SimpleDateFormat s= new SimpleDateFormat("HH:mm:ss");
+		 return s.format(string).toString();
+	}
 }

@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Categorie {
 
@@ -14,9 +16,10 @@ public class Categorie {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long Id;
 	private String Nom;
-	private String Description;	
+	private String Description;
+	@JsonIgnore
 	@OneToMany (mappedBy = "categorie")
-	private List<Marche> produits;
+	private List<Marche> marches;
 	
 	public Categorie() {
 		super();

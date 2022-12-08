@@ -20,7 +20,7 @@ import com.uklpmmi.marche.service.Marcheserviveimpl;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/marche/api")
+@RequestMapping("api/marche")
 public class MarcheController {
 
 	@Autowired
@@ -44,7 +44,7 @@ public class MarcheController {
 	 * @param id
 	 * @return
 	 */
-	@GetMapping("{id}")
+	@GetMapping("/{id}")
 	public Marche getOneMarche(@PathVariable("id") Long id) {
 		Marche marche= Marcheserviveimpl.GetOneMarche(id);
 		return marche;
@@ -60,7 +60,7 @@ public class MarcheController {
 	@PostMapping("")
 	public Marche createProduit(@RequestBody Marche marche) {
 		//Integer id=Marcheserviveimpl.getListMarche().size()+1;
-		//marche.setId(id);
+		marche.setDateCreation(new Date());
 	return Marcheserviveimpl.CreateMarche(marche);
 	}
 	

@@ -14,13 +14,13 @@ public class Marche {
 
 	@javax.persistence.Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long Id;
-	private String Nom;
-	private String Lieu;
-	private String Heure_ouverture;
-	private int  Hangars_nombre;
-	private String Heure_fermeture;
-	private Date DateCreation;
+	private long id;
+	private String nom;
+	private String lieu;
+	private String heure_ouverture;
+	private int  hangars_nombre;
+	private String heure_fermeture;
+	private Date dateCreation;
 	@ManyToOne
 	private Categorie categorie;
 
@@ -44,75 +44,98 @@ public class Marche {
 		
 	
 	public long getId() {
-		return Id;
+		return id;
 	}
 
 
 	public void setId(long id) {
-		Id = id;
+		this.id = id;
 	}
+
 
 
 	public String getNom() {
-		return Nom;
+		return nom;
 	}
+
 
 
 	public void setNom(String nom) {
-		Nom = nom;
+		this.nom = nom;
 	}
+
 
 
 	public String getLieu() {
-		return Lieu;
+		return lieu;
 	}
+
 
 
 	public void setLieu(String lieu) {
-		Lieu = lieu;
+		this.lieu = lieu;
 	}
 
 
+
 	public String getHeure_ouverture() {
-		return Heure_ouverture;
+		return heure_ouverture;
 	}
 
 
 	public void setHeure_ouverture(String heure_ouverture) {
-		 
-		Heure_ouverture = formatage(heure_ouverture);
+		this.heure_ouverture = heure_ouverture;
 	}
 
 
+
 	public int getHangars_nombre() {
-		return Hangars_nombre;
+		return hangars_nombre;
 	}
 
 
 	public void setHangars_nombre(int hangars_nombre) {
-		Hangars_nombre = hangars_nombre;
+		this.hangars_nombre = hangars_nombre;
 	}
+
 
 
 	public String getHeure_fermeture() {
-		return Heure_fermeture;
+		return heure_fermeture;
 	}
 
 
-	public void setHeure_fermeture(String string) {
-		Heure_fermeture =formatage(string);
+
+	public void setHeure_fermeture(String heure_fermeture) {
+		this.heure_fermeture = heure_fermeture;
 	}
 
 
+
+	public Categorie getCategorie() {
+		return categorie;
+	}
+
+
+
+	public void setCategorie(Categorie categorie) {
+		this.categorie = categorie;
+	}
+
+
+	
 	public Date getDateCreation() {
-		return DateCreation;
+		return dateCreation;
 	}
+
 
 
 	public void setDateCreation(Date dateCreation) {
-		DateCreation = dateCreation;
+		this.dateCreation = dateCreation;
 	}
-	
+
+
+
 	public String formatage (String string) {
 		SimpleDateFormat s= new SimpleDateFormat("HH:mm:ss");
 		 return s.format(string).toString();

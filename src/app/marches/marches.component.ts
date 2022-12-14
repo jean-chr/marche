@@ -36,7 +36,7 @@ export class MarchesComponent implements OnInit {
     this.marcheservice.Updatemarches(m).subscribe((result) => {
       this.chargeMarche()
       console.log(result)
-      this.toast.success({detail:'Update',summary:'Mise a jour terminée '+result.id, sticky:true,position:'tr'})
+      this.toast.success({detail:'Update',summary:'Mise a jour terminée id:'+result.id, sticky:true,position:'tr'})
     });
   }
 

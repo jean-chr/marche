@@ -28,7 +28,7 @@ export class MarchesComponent implements OnInit {
     this.marcheservice.Addmarche(newMarche).subscribe((result) => {
       this.chargeMarche();
       console.log(result);
-      this.toast.success({detail:'Ajoute',summary:'Merci,ajout avec succes'+result.nom, sticky:true,position:'bl'})
+      this.toast.success({detail:'Ajoute',summary:'Merci,ajout avec succes '+result.nom, sticky:true,position:'bl'})
     });
   }
 
@@ -36,7 +36,7 @@ export class MarchesComponent implements OnInit {
     this.marcheservice.Updatemarches(m).subscribe((result) => {
       this.chargeMarche()
       console.log(result)
-      this.toast.success({detail:'Update',summary:'Mise a jour terminée'+result.id, sticky:true,position:'tr'})
+      this.toast.success({detail:'Update',summary:'Mise a jour terminée '+result.id, sticky:true,position:'tr'})
     });
   }
 
@@ -44,7 +44,7 @@ export class MarchesComponent implements OnInit {
     this.marcheservice.Deletemarches(m.id).subscribe((result) => {
       this.chargeMarche()
       console.log(result)
-      this.toast.success({detail:'suppression',summary:'suppression de'+result.nom ,sticky:true,position:'br'})
+      this.toast.success({detail:'suppression',summary:'suppression de '+result.nom ,sticky:true,position:'br'})
     });
   }
 

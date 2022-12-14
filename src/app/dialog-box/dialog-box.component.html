@@ -1,0 +1,43 @@
+<!-- dialog-box.component.html -->
+<h1 mat-dialog-title>Action : <strong>{{action}}</strong></h1>
+<hr>
+<div mat-dialog-content>
+
+  <div *ngIf="action != 'Supprimer'; else elseTemplate">
+
+    <mat-form-field>
+      <mat-label>Nom marche</mat-label>
+      <input matInput placeholder="Nom marche" type="text" [(ngModel)]="marche.nom">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Lieu</mat-label>
+      <input matInput placeholder="Lieu" type="text" [(ngModel)]="marche.lieu">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Nombre hangar.stop</mat-label>
+      <input matInput placeholder="hangars" type="number" [(ngModel)]="marche.hangars_nombre">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Heure ouverture</mat-label>
+      <input matInput placeholder="Heure ouverture" type="time" [(ngModel)]="marche.heure_ouverture">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Heure fermeture</mat-label>
+      <input matInput placeholder="Heure fermeture" type="time" [(ngModel)]="marche.heure_fermeture" >
+    </mat-form-field>
+
+  </div>
+  <ng-template #elseTemplate>
+    vous etes sur de supprimer le marché : <br>
+    <b class="tewt-danger">{{marche.nom}}</b>?
+  </ng-template>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-raised-button (click)="doAction()">{{action}}</button>
+  <button mat-raised-button (click)="closeDialog()" mat-flat-button color="warn">Annuler</button>
+</div>

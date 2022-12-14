@@ -1,0 +1,30 @@
+<div class="">
+  <button mat-raised-button mat-flat-button color="primary"
+    (click)="OpenDialog('Ajouter','1500ms','1500ms',{})">Ajouter</button>
+  <table class="table ">
+    <thead class="table-primary">
+      <th> Id </th>
+      <th> Nom </th>
+      <th> Lieu </th>
+      <th> Ouverture </th>
+      <th> fermeture </th>
+      <th> Nbre hangars </th>
+      <th> action</th>
+    </thead>
+    <tbody *ngFor="let marche of marches">
+      <tr>
+        <td class="">{{marche.id}}</td>
+        <td class="">{{marche.nom}}</td>
+        <td class="">{{marche.lieu}}</td>
+        <td class="">{{marche.heure_ouverture }}</td>
+        <td class="">{{marche.heure_fermeture }}</td>
+        <td class="">{{marche.hangars_nombre }}</td>
+        <td>
+          <button mat-raised-button (click)="OpenDialog('Editer','10ms','1000ms',marche)">Editer</button>
+          <button mat-raised-button class="bg-danger"
+            (click)="OpenDialog('Supprimer','1500ms','10ms',marche)">supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -6,7 +6,7 @@ Java web projet Marche spring boot  Tp pratique
 
 - :telescope:Je travaille en tant qu’ingénieur logiciel et contribue au frontend et au backend pour la création d’applications Web.
 
-- :semis : avant-endangulairemarche
+- :seedling: front-end angulairemarche
 
 - :seedling: branch master  ===================> niveaau REST (Rescontroller)
 
